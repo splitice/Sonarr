@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
-import { queueLookupSeries, setImportSeriesValue } from 'Store/Actions/importSeriesActions';
+import { setImportSeriesValue } from 'Store/Actions/importSeriesActions';
 import createAllSeriesSelector from 'Store/Selectors/createAllSeriesSelector';
 import ImportSeriesRow from './ImportSeriesRow';
 
