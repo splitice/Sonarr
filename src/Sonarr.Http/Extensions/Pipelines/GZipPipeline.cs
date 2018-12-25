@@ -22,7 +22,7 @@ namespace Sonarr.Http.Extensions.Pipelines
 
         public void Register(IPipelines pipelines)
         {
-            pipelines.AfterRequest.AddItemToEndOfPipeline(CompressResponse);
+            //pipelines.AfterRequest.AddItemToEndOfPipeline(CompressResponse);
         }
 
         private class ExceptionSafeGZipStream : GZipStream

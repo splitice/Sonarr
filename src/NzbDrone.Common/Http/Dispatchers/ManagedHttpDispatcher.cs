@@ -37,7 +37,7 @@ namespace NzbDrone.Common.Http.Dispatchers
             webRequest.AllowAutoRedirect = false;
             webRequest.CookieContainer = cookies;
 
-            webRequest.Headers.Add("Accept-Encoding", "gzip");
+            //webRequest.Headers.Add("Accept-Encoding", "gzip");
 
             if (request.RequestTimeout != TimeSpan.Zero)
             {
