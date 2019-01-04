@@ -177,14 +177,12 @@ namespace NzbDrone.Mono.Disk
             {
                 var fileInfo = UnixFileSystemInfo.GetFileSystemEntry(source);
 
-                if (fileInfo.IsSymbolicLink) return false;
-
-                fileInfo.CreateLink(destination);
+                fileInfo.CreateSymbolicLink(destination);
                 return true;
             }
             catch (Exception ex)
             {
-                Logger.Debug(ex, string.Format("Hardlink '{0}' to '{1}' failed.", source, destination));
+                Logger.Debug(ex, string.Format("Symboliclink '{0}' to '{1}' failed.", source, destination));
                 return false;
             }
         }
